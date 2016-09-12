@@ -4,7 +4,7 @@
 
 * clone this repo
 * change into created directory
-* verify the spring-app wit `./mvnw verify -P!ui`
+* verify the spring-app wit `./mvnw clean verify -P\!ui-dev`
 * do `git clone https://github.com/AngularClass/angular2-webpack-starter.git app`
 * in `app/src/app/app.module.ts` search for `RouterModule.forRoot(ROUTES, { useHash: true })` and replace `true` with `false`
 * in `app/config/webpack.common.js` set `baseUrl: '/app/',` in _METADATA_-section
