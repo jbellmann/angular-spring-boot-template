@@ -12,3 +12,11 @@
 below _path_ seems to be a good place
 * in `app/src/app/app.component.ts` make sure `angularclassLogo = '/assets/img/angularclass-avatar.png';` starts with `/asset/...`
 * in `app/package.json` add the following to the _script_-section `"copyDist": "copyup dist/*.js ../target/classes/static && copyup dist/index.html ../target/classes/templates && copyup dist/assets/**/* ../target/classes/static"`
+* in `app/config/webpack.dev.js` add a proxy-configuration to pass requests to your running spring-boot-backend
+```
+      proxy: {
+        '/api/*': {
+          target: 'http://localhost:8080'
+        }
+      }
+```
